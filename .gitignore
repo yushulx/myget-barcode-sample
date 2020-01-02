@@ -1,0 +1,11 @@
+/maven/.project
+/maven/.settings
+/maven/.vscode
+/maven/.classpath
+/npm/node_modules
+*.class
+/maven/target
+/nuget/.vs
+/nuget/packages
+/nuget/NetFrameworkBarcode/obj
+/nuget/NetFrameworkBarcode/bin

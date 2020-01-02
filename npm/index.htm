@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="node_modules/dynamsoft-javascript-barcode/dist/dbr.js"
+        data-productKeys="LICENSE-KEY"></script>
+    <input id="uploadImage" type="file" accept="image/bmp,image/jpeg,image/png,image/gif">
+    <p id="results"></p>
+
+    <script>
+        document.getElementById('uploadImage').addEventListener('change', async function () {
+            $("#results").empty();
+            var files = this.files;
+            let reader = await Dynamsoft.BarcodeReader.createInstance();
+            let results = await reader.decode(files[0]);
+            if (results.length == 0) {
+                $("#results").append('No barcode detected!');
+                return;
+            }
+            for (let result of results) {
+                console.log(result.barcodeText);
+                $("#results").append(result.barcodeText);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
