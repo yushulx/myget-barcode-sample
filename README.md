@@ -67,3 +67,7 @@ BarcodeReader br = new BarcodeReader("LICENSE-KEY");
 ```
 
 Press F5 to run the app.
+
+## Blog
+
+[How to Use MyGet to Manage and Distribute Packages](https://www.codepool.biz/myget-package-manager-barcode.html)
